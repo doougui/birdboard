@@ -18,6 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__ . '/auth.php';
+
 Route::get('/projects', [ProjectsController::class, 'index']);
 Route::get('/projects/{project}', [ProjectsController::class, 'show']);
-Route::post('/projects', [ProjectsController::class, 'store']);
+Route::post('/projects', [ProjectsController::class, 'store'])->middleware('auth');
