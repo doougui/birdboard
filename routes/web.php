@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/projects', [ProjectsController::class, 'store']);
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', function () {
+    return redirect('/projects');
+})->name('home');

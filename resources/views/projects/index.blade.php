@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Projects</h1>
+    <div class="flex items-center mb-3">
+        <a href="/projects/create">New Project</a>
+    </div>
 
     <ul>
         @forelse ($projects as $project)
