@@ -23,8 +23,6 @@
         </div>
 
         <div class="field">
-            <label for="title" class="label">Title</label>
-
             <div class="control">
                 <button type="submit" class="button is-link">Create Project</button>
                 <a href="/projects">Cancel</a>

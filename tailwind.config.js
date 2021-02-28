@@ -13,11 +13,18 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                gray: {
-                    light: '#F5F6F9',
-                    normal: 'rgba(0, 0, 0, 0.4)',
-                },
+                white: 'white',
             },
+        },
+        colors: {
+            gray: {
+                DEFAULT: 'rgba(0, 0, 0, 0.4)',
+                light: '#F5F6F9',
+            },
+            blue: {
+                DEFAULT: '#47CDFF',
+                light: '#8AE2FE',
+            }
         },
         boxShadow: {
             DEFAULT: '0 0 5px 0 rgba(0, 0, 0, 0.08)',
