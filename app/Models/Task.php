@@ -10,6 +10,7 @@ class Task extends Model
     use HasFactory;
 
     protected $guarded = [];
+    protected $touches = ['project'];
 
     public function project()
     {
