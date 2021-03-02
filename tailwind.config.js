@@ -14,17 +14,15 @@ module.exports = {
             },
             colors: {
                 white: 'white',
+                gray: {
+                    DEFAULT: 'rgba(0, 0, 0, 0.4)',
+                    light: '#F5F6F9',
+                },
+                blue: {
+                    DEFAULT: '#47CDFF',
+                    light: '#8AE2FE',
+                }
             },
-        },
-        colors: {
-            gray: {
-                DEFAULT: 'rgba(0, 0, 0, 0.4)',
-                light: '#F5F6F9',
-            },
-            blue: {
-                DEFAULT: '#47CDFF',
-                light: '#8AE2FE',
-            }
         },
         boxShadow: {
             DEFAULT: '0 0 5px 0 rgba(0, 0, 0, 0.08)',
