@@ -63,6 +63,21 @@ class ProjectTasksTest extends TestCase
 
         $this->actingAs($project->owner)
             ->patch($project->tasks[0]->path(), [
+                'body' => 'Changed'
+            ]);
+
+        $this->assertDatabaseHas('tasks', [
+            'body' => 'Changed'
+        ]);
+    }
+
+    /** @test */
+    public function a_task_can_be_completed()
+    {
+        $project = ProjectFactory::withTasks(1)->create();
+
+        $this->actingAs($project->owner)
+            ->patch($project->tasks[0]->path(), [
                 'body' => 'Changed',
                 'completed' => true,
             ]);
@@ -70,6 +85,28 @@ class ProjectTasksTest extends TestCase
         $this->assertDatabaseHas('tasks', [
             'body' => 'Changed',
             'completed' => true,
+        ]);
+    }
+
+    /** @test */
+    public function a_task_can_be_marked_as_incomplete()
+    {
+        $project = ProjectFactory::withTasks(1)->create();
+
+        $this->actingAs($project->owner)
+                ->patch($project->tasks[0]->path(), [
+                    'body' => 'Changed',
+                    'completed' => true,
+                ]);
+
+        $this->patch($project->tasks[0]->path(), [
+            'body' => 'Changed',
+            'completed' => false,
+        ]);
+
+        $this->assertDatabaseHas('tasks', [
+            'body' => 'Changed',
+            'completed' => false,
         ]);
     }
 
