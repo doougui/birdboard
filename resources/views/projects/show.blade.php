@@ -11,12 +11,11 @@
     </header>
 
     <main>
+        <h2 class="text-lg text-gray font-normal mb-3">Tasks</h2>
+
         <div class="lg:flex -mx-3 mb-6">
             <div class="lg:w-3/4 px-3">
                 <div class="mb-8">
-                    <h2 class="text-lg text-gray font-normal mb-3">Tasks</h2>
-                    {{-- tasks --}}
-
                     @foreach ($project->tasks as $task)
                         <div class="card mb-3">
                             <form action="{{ $task->path() }}" method="POST">
@@ -69,6 +68,7 @@
 
             <div class="lg:w-1/4 px-3">
                 @include('projects.card')
+                @include('projects.activity.card')
             </div>
         </div>
     </main>

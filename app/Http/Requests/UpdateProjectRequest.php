@@ -41,7 +41,7 @@ class UpdateProjectRequest extends FormRequest
     {
         dd($this->project);
         if (!$this->project()) {
-            $user = $user ?? auth()->user();
+            $user ??= auth()->user();
             return $user->projects()->create($this->validated());
         }
 
