@@ -2,12 +2,14 @@
 
 namespace Tests\Unit;
 
-use App\Models\Project;
-use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Facades\Tests\Setup\ProjectFactory;
 use Tests\TestCase;
 
+/**
+ * Class ActivityTest
+ * @package Tests\Unit
+ */
 class ActivityTest extends TestCase
 {
     use RefreshDatabase;

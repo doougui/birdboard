@@ -66,7 +66,7 @@ class ProjectsController extends Controller
      */
     public function update(Project $project)
     {
-        $this->authorize('update', $project);
+        $this->authorize($project);
 
         $project->update($this->validateRequest());
 
