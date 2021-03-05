@@ -46,7 +46,6 @@ class ProjectsController extends Controller
     public function store()
     {
         $project = auth()->user()->projects()->create($this->validateRequest());
-        $project->members()->syncWithoutDetaching(auth()->user());
 
         return redirect($project->path());
     }
