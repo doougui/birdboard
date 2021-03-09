@@ -7,11 +7,13 @@
         {{ Illuminate\Support\Str::limit($project->description, 100) }}
     </div>
 
-    <footer>
-        <form method="POST" action="{{ $project->path() }}" class="text-right">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="text-xs text-red-500">Delete</button>
-        </form>
-    </footer>
+    @can('manage', $project)
+        <footer>
+            <form method="POST" action="{{ $project->path() }}" class="text-right">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="text-xs text-red-500">Delete</button>
+            </form>
+        </footer>
+    @endcan
 </div>
