@@ -94,13 +94,13 @@ return [
     |--------------------------------------------------------------------------
     |
     | If you are using Markdown based email rendering, you may configure your
-    | theme and component paths here, allowing you to customize the design
+    | themes and component paths here, allowing you to customize the design
     | of the emails. Or, you may simply stick with the Laravel defaults!
     |
     */
 
     'markdown' => [
-        'theme' => 'default',
+        'themes' => 'default',
 
         'paths' => [
             resource_path('views/vendor/mail'),

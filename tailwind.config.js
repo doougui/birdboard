@@ -17,14 +17,11 @@ module.exports = {
             },
             colors: {
                 white: 'white',
-                gray: {
-                    DEFAULT: 'rgba(0, 0, 0, 0.4)',
-                    light: '#F5F6F9',
-                },
-                blue: {
-                    DEFAULT: '#47CDFF',
-                    light: '#8AE2FE',
-                },
+                accent: 'var(--text-accent-color)',
+                'accent-light': 'var(--text-accent-light-color)',
+                muted: 'var(--text-muted-color)',
+                'muted-light': 'var(--text-muted-light-color)',
+
                 page: 'var(--page-background-color)',
                 card: 'var(--card-background-color)',
                 button: 'var(--button-background-color)',
