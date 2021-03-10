@@ -12,6 +12,9 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            textColor: {
+                default: 'var(--text-default-color)'
+            },
             colors: {
                 white: 'white',
                 gray: {
@@ -21,7 +24,11 @@ module.exports = {
                 blue: {
                     DEFAULT: '#47CDFF',
                     light: '#8AE2FE',
-                }
+                },
+                page: 'var(--page-background-color)',
+                card: 'var(--card-background-color)',
+                button: 'var(--button-background-color)',
+                header: 'var(--header-background-color)'
             },
         },
         boxShadow: {
