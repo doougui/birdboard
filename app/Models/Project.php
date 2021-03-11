@@ -66,6 +66,17 @@ class Project extends Model
     }
 
     /**
+     * Add multiple tasks to a project
+     *
+     * @param array $tasks
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function addTasks($tasks)
+    {
+        return $this->tasks()->createMany($tasks);
+    }
+
+    /**
      * The activity feed for the project.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
