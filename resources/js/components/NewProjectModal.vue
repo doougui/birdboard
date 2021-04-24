@@ -38,9 +38,9 @@
                         <input
                             type="text"
                             class="border border-muted-light mb-2 p-2 text-xs block w-full rounded bg-card text-default"
-                            placeholder="Task 1"
-                            v-for="task in form.tasks"
+                            v-for="(task, index) in form.tasks"
                             v-model="task.body"
+                            :placeholder="`Task ${++index}`"
                         >
                     </div>
 
