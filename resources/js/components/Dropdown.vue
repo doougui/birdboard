@@ -31,7 +31,6 @@
             return { isOpen: false }
         },
 
-
         watch: {
             isOpen(opened) {
                 if (opened) {

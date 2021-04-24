@@ -19,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', function () {
-        return redirect('/projects');
-    })->name('home');
+    Route::redirect('/', '/projects')->name('home');
 
     Route::resource('projects', ProjectsController::class);
 
